@@ -1,84 +1,14 @@
-body {
-    font-family: Arial, sans-serif;
-    background: #f0f0f0;
-    margin: 0;
-    padding: 20px;
-    color: #333;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #333;
-    color: white;
-    padding: 10px 20px;
-}
-
-h1, h2 {
-    margin: 0;
-}
-
-#resetBtn {
-    background: #ff6b35;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-#resetBtn:hover {
-    background: #e55a2b;
-}
-
-.grid {
-    display: grid;
-    gap: 10px;
-    max-width: 800px;
-    margin: 20px auto;
-}
-
-/* Desktop: due righe (A, poi B) */
-@media (min-width: 769px) {
-    .grid {
-        grid-template-areas:
-            "a1 a2 a3 a4 a5 a6 a7 a8 a9 a10 a11 a12"
-            "b1 b2 b3 b4 b5 b6 b7 b8 b9 b10 b11 b12";
-    }
-    .key-icon:nth-child(1) { grid-area: a1; }
-    .key-icon:nth-child(2) { grid-area: a2; }
-    .key-icon:nth-child(3) { grid-area: a3; }
-    .key-icon:nth-child(4) { grid-area: a4; }
-    .key-icon:nth-child(5) { grid-area: a5; }
-    .key-icon:nth-child(6) { grid-area: a6; }
-    .key-icon:nth-child(7) { grid-area: a7; }
-    .key-icon:nth-child(8) { grid-area: a8; }
-    .key-icon:nth-child(9) { grid-area: a9; }
-    .key-icon:nth-child(10) { grid-area: a10; }
-    .key-icon:nth-child(11) { grid-area: a11; }
-    .key-icon:nth-child(12) { grid-area: a12; }
-    .key-icon:nth-child(13) { grid-area: b1; }
-    .key-icon:nth-child(14) { grid-area: b2; }
-    .key-icon:nth-child(15) { grid-area: b3; }
-    .key-icon:nth-child(16) { grid-area: b4; }
-    .key-icon:nth-child(17) { grid-area: b5; }
-    .key-icon:nth-child(18) { grid-area: b6; }
-    .key-icon:nth-child(19) { grid-area: b7; }
-    .key-icon:nth-child(20) { grid-area: b8; }
-    .key-icon:nth-child(21) { grid-area: b9; }
-    .key-icon:nth-child(22) { grid-area: b10; }
-    .key-icon:nth-child(23) { grid-area: b11; }
-    .key-icon:nth-child(24) { grid-area: b12; }
-}
-
-/* Mobile: griglia auto-adattiva */
-@media (max-width: 768px) {
-    .grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-.key-icon {
-    width: 50px;
-    height
+body { font-family: Arial, sans-serif; background: #f0f0f0; margin: 0; padding: 20px; color: #333; }
+header { display: flex; justify-content: space-between; align-items: center; background: #333; color: white; padding: 10px 20px; }
+h1, h2 { margin: 0; }
+#resetBtn { background: #ff6b35; color: white; border: none; padding: 8px 16px; cursor: pointer; border-radius: 4px; }
+#resetBtn:hover { background: #e55a2b; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); gap: 10px; max-width: 800px; margin: 20px auto; }
+.key-icon { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); cursor: pointer; transition: transform 0.2s; border: 3px solid transparent; }
+.key-icon:hover, .key-icon.active { transform: scale(1.1); border-color: #333; }
+table { width: 100%; border-collapse: collapse; margin: 20px 0; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+th, td { padding: 12px; text-align: center; border: 1px solid #ddd; }
+th { background: #333; color: white; }
+.compat-key { display: inline-block; width: 40px; height: 40px; border-radius: 50%; color: white; font-weight: bold; line-height: 40px; cursor: pointer; transition: transform 0.2s; margin: 0 auto; }
+.compat-key:hover { transform: scale(1.1); }
+@media (max-width: 768px) { .grid { grid-template-columns: repeat(4, 1fr); } table { font-size: 0.8em; } }
