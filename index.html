@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ Studio Harmonic Mixing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>DJ Studio Harmonic Mixing</h1>
+        <button id="resetBtn" style="display: none;">Reset</button>
+    </header>
+
+    <main>
+        <section id="mainPage">
+            <h2>Seleziona la Chiave di Partenza</h2>
+            <div id="keyGrid" class="grid">
+                <!-- Icone generate via JS -->
+            </div>
+        </section>
+
+        <section id="mixPage" style="display: none;">
+            <h2>Combinazioni per <span id="activeKey"></span></h2>
+            <table id="mixTable">
+                <thead>
+                    <tr>
+                        <th>Starting Key</th>
+                        <th>Perfect Mix</th>
+                        <th>-1 Mix</th>
+                        <th>+1 Mix</th>
+                        <th>Energy Boost</th>
+                        <th>Scale Change</th>
+                        <th>Diagonal Mix</th>
+                        <th>Jaw's Mix</th>
+                        <th>Mood Shifter</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Riga generata via JS -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
