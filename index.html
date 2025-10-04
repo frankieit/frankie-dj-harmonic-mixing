@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DJ Studio Harmonic Mixing</title>
+    <title>Frankie DJ Studio Harmonic Mixing</title>
     <link rel="stylesheet" href="styles.css">
-    <meta name="description" content="Tool per harmonic mixing con ruota di Camelot per DJ.">
 </head>
 <body>
     <header>
@@ -14,6 +13,7 @@
     </header>
 
     <main>
+        <!-- Pagina Principale -->
         <section id="mainPage">
             <h2>Seleziona la Chiave di Partenza</h2>
             <div id="keyGrid" class="grid">
@@ -21,6 +21,7 @@
             </div>
         </section>
 
+        <!-- Pagina Secondaria -->
         <section id="mixPage" style="display: none;">
             <h2>Combinazioni per <span id="activeKey"></span></h2>
             <table id="mixTable">
@@ -41,11 +42,6 @@
                     <!-- Riga generata via JS -->
                 </tbody>
             </table>
-            <div id="pagination">
-                <button class="pagination-btn" id="prevBtn" disabled>Precedente</button>
-                <span id="pageInfo"></span>
-                <button class="pagination-btn" id="nextBtn">Successivo</button>
-            </div>
         </section>
     </main>
 
